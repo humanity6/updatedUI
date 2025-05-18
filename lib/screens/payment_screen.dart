@@ -40,7 +40,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    '\$50.00',
+                    'PKR 50.00',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'screens/signin_screen.dart';
 import 'providers/auth_provider.dart';
-import 'screens/payment_screen.dart';
+import 'screens/new_feedback.dart';
 import 'screens/home_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +19,9 @@ void main() async {
   );
 
   runApp(
-    MultiProvider(providers: [
+     MultiProvider(providers: [
       ChangeNotifierProvider(create: (_) => AuthProvider()),
-    ], child: const MyApp()),
+    ],child: const MyApp()),
   );
 }
 

@@ -3,6 +3,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:intl/intl.dart';
 import 'payment_screen.dart';
 import 'tryon_screen.dart';
+import 'new_feedback.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -479,38 +480,106 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        DropdownButtonFormField<String>(
-                          decoration: InputDecoration(
-                            labelText: 'Select Stylist',
-                            labelStyle: GoogleFonts.lato(color: primaryColor),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(color: Colors.grey.shade300),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(color: Colors.grey.shade300),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(color: primaryColor, width: 2),
-                            ),
-                            filled: true,
-                            fillColor: Colors.grey.shade50,
-                            prefixIcon: Icon(Icons.person, color: Colors.grey.shade600),
-                          ),
-                          items: stylists.map<DropdownMenuItem<String>>((stylist) {
-                            return DropdownMenuItem<String>(
-                              value: stylist['stylist_id'],
-                              child: Text(
-                                '${stylist['first_name']} ${stylist['last_name']}',
-                                style: GoogleFonts.lato(),
+                        // Modified stylist selection with See Reviews button
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: DropdownButtonFormField<String>(
+                                decoration: InputDecoration(
+                                  labelText: 'Select Stylist',
+                                  labelStyle: GoogleFonts.lato(color: primaryColor),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(color: Colors.grey.shade300),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(color: Colors.grey.shade300),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(color: primaryColor, width: 2),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.grey.shade50,
+                                  prefixIcon: Icon(Icons.person, color: Colors.grey.shade600),
+                                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                                  isCollapsed: true,
+                                ),
+                                isExpanded: true,
+                                items: stylists.map<DropdownMenuItem<String>>((stylist) {
+                                  return DropdownMenuItem<String>(
+                                    value: stylist['stylist_id'],
+                                    child: Container(
+                                      constraints: const BoxConstraints(maxWidth: 200),
+                                      child: Text(
+                                        '${stylist['first_name']} ${stylist['last_name']}',
+                                        style: GoogleFonts.lato(),
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                                onChanged: (value) => setState(() => selectedStylist = value),
+                                icon: Icon(Icons.arrow_drop_down, color: primaryColor),
+                                dropdownColor: Colors.white,
+                                menuMaxHeight: 300,
+                                selectedItemBuilder: (BuildContext context) {
+                                  return stylists.map<Widget>((stylist) {
+                                    return Container(
+                                      constraints: const BoxConstraints(maxWidth: 200),
+                                      child: Text(
+                                        '${stylist['first_name']} ${stylist['last_name']}',
+                                        style: GoogleFonts.lato(),
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                      ),
+                                    );
+                                  }).toList();
+                                },
                               ),
-                            );
-                          }).toList(),
-                          onChanged: (value) => setState(() => selectedStylist = value),
-                          icon: Icon(Icons.arrow_drop_down, color: primaryColor),
-                          dropdownColor: Colors.white,
+                            ),
+                            const SizedBox(width: 12),
+
+                            Padding(
+                              padding: const EdgeInsets.only(top: 4),
+                              child: ElevatedButton.icon(
+                                onPressed: () {
+                                  if (selectedStylist != null) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => StylistFeedbackScreen(),
+                                      ),
+                                    );
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        content: Text('Please select a stylist to see reviews'),
+                                        backgroundColor: Colors.orange,
+                                      ),
+                                    );
+                                  }
+                                },
+                                icon: const Icon(Icons.star_rate_rounded),
+                                label: Text(
+                                  'See Reviews',
+                                  style: GoogleFonts.lato(fontWeight: FontWeight.w500),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  foregroundColor: Colors.white,
+                                  backgroundColor: accentColor,
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  elevation: 2,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
 
                         const SizedBox(height: 20),
@@ -546,7 +615,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     style: GoogleFonts.lato(),
                                   ),
                                   Text(
-                                    '\$${service['price']}',
+                                    '\$PKR {service["price"]}',
                                     style: GoogleFonts.lato(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.green.shade700,

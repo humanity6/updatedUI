@@ -16,6 +16,8 @@ dependencies:
   intl: ^0.18.1
   http: ^1.1.0
   supabase_flutter: ^2.0.0
+  camerakit_flutter: ^1.0.6
+  video_player: ^2.8.2
 
   
 dev_dependencies:

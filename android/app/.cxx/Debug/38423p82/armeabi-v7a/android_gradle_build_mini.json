@@ -4,14 +4,14 @@
   ],
   "cleanCommandsComponents": [
     [
-      "P:\\andriodstudioshit\\cmake\\3.22.1\\bin\\ninja.exe",
+      "P:\\andriodsdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
       "P:\\salonapp-main\\android\\app\\.cxx\\Debug\\38423p82\\armeabi-v7a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "P:\\andriodstudioshit\\cmake\\3.22.1\\bin\\ninja.exe",
+    "P:\\andriodsdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
     "P:\\salonapp-main\\android\\app\\.cxx\\Debug\\38423p82\\armeabi-v7a",
     "{LIST_OF_TARGETS_TO_BUILD}"

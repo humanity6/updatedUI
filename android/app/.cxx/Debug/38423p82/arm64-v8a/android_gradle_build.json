@@ -4,14 +4,14 @@
   ],
   "cleanCommandsComponents": [
     [
-      "P:\\andriodstudioshit\\cmake\\3.22.1\\bin\\ninja.exe",
+      "P:\\andriodsdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
       "P:\\salonapp-main\\android\\app\\.cxx\\Debug\\38423p82\\arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "P:\\andriodstudioshit\\cmake\\3.22.1\\bin\\ninja.exe",
+    "P:\\andriodsdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
     "P:\\salonapp-main\\android\\app\\.cxx\\Debug\\38423p82\\arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"
@@ -19,8 +19,8 @@
   "libraries": {},
   "toolchains": {
     "toolchain": {
-      "cCompilerExecutable": "P:\\andriodstudioshit\\ndk\\28.0.13004108\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
-      "cppCompilerExecutable": "P:\\andriodstudioshit\\ndk\\28.0.13004108\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+      "cCompilerExecutable": "P:\\andriodsdk\\ndk\\28.0.13004108\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "P:\\andriodsdk\\ndk\\28.0.13004108\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
   "cFileExtensions": [],

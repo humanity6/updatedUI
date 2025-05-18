@@ -8,10 +8,10 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "P:/andriodstudioshit/cmake/3.22.1/bin/cmake.exe",
-			"cpack" : "P:/andriodstudioshit/cmake/3.22.1/bin/cpack.exe",
-			"ctest" : "P:/andriodstudioshit/cmake/3.22.1/bin/ctest.exe",
-			"root" : "P:/andriodstudioshit/cmake/3.22.1/share/cmake-3.22"
+			"cmake" : "P:/andriodsdk/cmake/3.22.1/bin/cmake.exe",
+			"cpack" : "P:/andriodsdk/cmake/3.22.1/bin/cpack.exe",
+			"ctest" : "P:/andriodsdk/cmake/3.22.1/bin/ctest.exe",
+			"root" : "P:/andriodsdk/cmake/3.22.1/share/cmake-3.22"
 		},
 		"version" : 
 		{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-06dc08d458312ff3de5f.json",
+			"jsonFile" : "cache-v2-ba588c9f6ffe176a8a0b.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-3a08c3400c344bbbf8d3.json",
+			"jsonFile" : "cmakeFiles-v1-dc3c10d6efa230f8f464.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -59,7 +59,7 @@
 		{
 			"cache-v2" : 
 			{
-				"jsonFile" : "cache-v2-06dc08d458312ff3de5f.json",
+				"jsonFile" : "cache-v2-ba588c9f6ffe176a8a0b.json",
 				"kind" : "cache",
 				"version" : 
 				{
@@ -69,7 +69,7 @@
 			},
 			"cmakeFiles-v1" : 
 			{
-				"jsonFile" : "cmakeFiles-v1-3a08c3400c344bbbf8d3.json",
+				"jsonFile" : "cmakeFiles-v1-dc3c10d6efa230f8f464.json",
 				"kind" : "cmakeFiles",
 				"version" : 
 				{

@@ -41,9 +41,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	
+	<!-- Camera permissions -->
+	<key>NSCameraUsageDescription</key>
+	<string>App needs camera permission for showing hairstyle lenses</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App needs microphone permission for recording video</string>
+	
+	<!-- CameraKit Credentials -->
+	<key>SCCameraKitClientID</key>
+	<string>6a766679-d35e-45bf-b27c-e7fa71edd9be</string>
+	<key>SCCameraKitAPIToken</key>
+	<string>eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzQ0NDAxNjQ5LCJzdWIiOiI0MTg5M2VhMy0zZWEyLTRjNmQtYjg5ZC05MWFmMjU4Mjc0OTB-U1RBR0lOR34wNmRiZWNiZi1lY2M0LTRkNmYtYTAyZC1lOTFlYTAyZTNiNDUifQ.uT-UeykDKf7_5Wn1KrihYzjr_Dr7vcBj83RcOcRDJEE</string>
 </dict>
 </plist>

@@ -2,7 +2,8 @@
     <application
         android:label="flutter_application_1"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,6 +31,14 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            
+        <!-- CameraKit Credentials -->
+        <meta-data 
+            android:name="com.snap.camerakit.app.id" 
+            android:value="6a766679-d35e-45bf-b27c-e7fa71edd9be" />
+        <meta-data 
+            android:name="com.snap.camerakit.api.token" 
+            android:value="eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzQ0NDAxNjQ5LCJzdWIiOiI0MTg5M2VhMy0zZWEyLTRjNmQtYjg5ZC05MWFmMjU4Mjc0OTB-U1RBR0lOR34wNmRiZWNiZi1lY2M0LTRkNmYtYTAyZC1lOTFlYTAyZTNiNDUifQ.uT-UeykDKf7_5Wn1KrihYzjr_Dr7vcBj83RcOcRDJEE" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
